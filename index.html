@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Treasure Hunt</title>
+		<link rel="shortcut icon" href="https://www.goodfreephotos.com/albums/vector-images/treasure-chest-vector-art.png">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+<div class="default">
+
+		<br id="top">
+        <br />
+        <br />
+    <div class="title">
+        <img src="https://www.goodfreephotos.com/albums/vector-images/treasure-chest-vector-art.png" height="200px">
+        <h1>TreasARRRRRRRRR</h1>
+    </div>
+    <!--
+		<span style="text-align: left; list-style-position: inside; padding-left:25%">
+
+		</span>
+    -->
+
+		<p><br></p>
+        <table align="center" width="75%">
+            <tr>
+                <td>
+                    <hr />
+                </td>
+            </tr>
+        </table>
+		<p><br></p>
+
+        <h2 id="Rules">Rules:</h2>
+        <ol style="text-align: left; list-style-position: inside; padding-left:25%; font-size:20px;">
+            <li>Get Marooned.</li>
+            <li>Locate da booty.</li>
+            <li>Attempt to retrieve said booty.</li>
+            <li>Avoid tribal dudes (there are none).</li>
+            <li>Only 30 moves.</li>
+            <li>Find it, or else...</li>
+        </ol>
+
+<br />
+<br />
+
+
+<table align="center" style="border: 2px solid black" width="50%" id="gameInfo">
+
+    <tr>
+        <td style="text-align: center; padding:4%" width="2%">
+            <h2 style="letter-spacing: 3px" align="center" id="triesLeft"></h2>
+        </td>
+        <td style="text-align: center; padding:4%" width="2%">
+            <h2 style="letter-spacing: 3px" align="center" id="elapsedTime"></h2>
+        </td>
+    </tr>
+
+</table>
+
+
+
+
+        <table style="border: 2px solid black; font-size:70px; border-radius: 25px" cellspacing="30" id="gameBoard" align="center" class="gameBoard_class">
+            <tr id="row1">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+            <tr id="row2">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+            <tr id="row3">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+            <tr id="row4">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+            <tr id="row5">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+            <tr id="row6">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+            <tr id="row7">
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell1">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell2">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell3">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell4">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell5">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell6">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell7">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell8">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell9">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell10">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell11">𐄳</td>
+                <td onClick="clicked(this.parentElement.id, this.id)" id="cell12">𐄳</td>
+            </tr>
+        </table>
+
+</div>
+<br />
+
+<a href="#Rules">
+    <table class="resetButton" onClick= {location.reload()}>
+        <tr>
+            <td>
+                <div class="buttonText">Reset  Da  BOOTY</div>
+            </td>
+        </tr>
+    </table>
+</a>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+        <footer align="center"><a href="#top">Austin, Richie</a> <p></p> <a href="https://en.wikipedia.org/wiki/Wikipedia" target="_blank"> External Link </a> </footer>
+        <script type="text/javascript" src="treasurehunt.js"></script>
+    </body>
+</html>
